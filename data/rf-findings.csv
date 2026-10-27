@@ -1,0 +1,11 @@
+band_mhz,target,tool,result,notes
+433.92,Weather sensor,rtl_433,Decoded,Third-party weather sensor decoded and published to MQTT
+433.92,Lighting switches and remote fob,rtl_433 (protocol 61 enabled),Decoded,Required enabling a protocol that is off by default
+433/868,Noise-floor survey,rtl_433 / rtl_power,Done,Mapped background and active channels in the house
+868,Heating controls (RAMSES-II),rtl_433,Seen but not decoded,Traffic visible; rtl_433 has no RAMSES-II decoder -> purpose-built gateway used instead
+868,Wireless fire/CO alarms,Spectrum observation,Seen,Interconnect traffic observed; integrated via a relay interface instead
+868.1,Water utility smart meter,Spectrum + wmbusmeters research,Not decodable,Meter uses LoRaWAN on the utility's network (not wM-Bus) -> supplier data integration instead
+868,wM-Bus (T1/C1/S1 modes),wmbusmeters research,Researched,Mode differences documented; no wM-Bus meter present
+BLE (2.4 GHz),Vehicle tyre-pressure sensors,Test,Not on 433 MHz,Sensors use BLE rather than 433 MHz
+1090,ADS-B aircraft,dump1090,Planned,Local aircraft tracking to complement the cloud flight-tracking service
+Wideband,Web SDR receiver,OpenWebRX via Portainer,Planned,Browser-based receiver on the HA host
